@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Animation on Scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="../../assets/img/logo.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../assets/style.css">
+
+    <!-- JS -->
+    <script src="../../assets/script.js"></script>
+    
+    <title>Product | Nyah Siok</title>
+</head>
+<body>
+    
+    <!-- Navbar -->
+    <div class="container-fluid" id="navbar">
+        <div class="container">
+            <header class="d-flex flex-wrap justify-content-between py-3">
+                <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                    <img src="../../assets/img/logo.png" alt="logo">
+                    <span class="fs-4">Nyah Siok</span>
+                </a>
+
+                <!-- Menu Navbar -->
+                <ul class="nav">
+                    <li class="nav-item"><a href="../../index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="../about/index.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="" class="nav-link active" aria-current="page">Product</a></li>
+                    <li class="nav-item"><a href="../contact/index.html" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a href="../team/index.html" class="nav-link">Team</a></li>
+                </ul>
+
+                <div class="hamburger" onclick="openSidebar()">&#9776;</div>
+            </header>
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">&times;</a>
+        <div class="mt-4">
+            <a href="../../index.html" class="side-link">Home</a>
+            <a href="../about/index.html" class="side-link">About</a>
+            <a href="" class="side-link active" aria-current="page">Product</a>
+            <a href="../contact/index.html" class="side-link">Contact</a>
+            <a href="../team/index.html" class="side-link">Team</a>
+        </div>
+    </div>
+    
+    <!-- Konten -->
+    <!-- Product -->
+    <section class="product mb-5">
+        <div class="container">
+            <h1 class="text-center my-4" data-aos="fade-down" data-aos-delay="200"><b>Produk</b></h1>
+            <hr class="garis">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card">
+                        <img src="../../assets/img/cakwe-ayamudang.jpg" class="card-img-top" alt="Cakwe Ayamudang">
+                        <div class="card-body">
+                            <h5 class="card-title">CAKWE AYAM UDANG</h5>
+                            <p class="card-text">
+                                Olahan Ayam, udang, telur, tepung yang di taruh diatas cakwe dan disajikan dengan cara digoreng.
+                            </p>
+                            <button class="btn">Rp. 20.000 - 35.000</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
+                    <div class="card">
+                        <img src="../../assets/img/galantine-ayam.jpg" class="card-img-top" alt="Galantine Ayam">
+                        <div class="card-body">
+                            <h5 class="card-title">GALANTINE AYAM</h5>
+                            <p class="card-text">
+                                Olahan Ayam, telur, tepun, groti yang di haluskan dan di olah dengan di kukus
+                                dan dilengkapi dengan sayuran serta saus galantine.
+                            </p>
+                            <button class="btn">Rp. 25.000 - 40.000</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card">
+                        <img src="../../assets/img/kekian-ayamudang.jpg" class="card-img-top" alt="Product 3">
+                        <div class="card-body">
+                            <h5 class="card-title">AYAM UDANG</h5>
+                            <p class="card-text">
+                                Olahan Ayam, udang, telur, tepung yang diberi isian keju leleh,
+                                lalu di balur dengan tepung roti dan di sajikan dengan digoreng.
+                            </p>
+                            <button class="btn">Rp. 20.000 - 35.000</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card">
+                        <img src="../../assets/img/lumpia-ayamudang.jpg" class="card-img-top" alt="Product 4">
+                        <div class="card-body">
+                            <h5 class="card-title">LUMPIA AYAM UDANG</h5>
+                            <p class="card-text">
+                                Olahan Ayam, udang, telur, tepung yang dibalut dengan kulit tahu dan disajikan dengan digoreng
+                            </p>
+                            <button class="btn">Rp. 20.000 - 35.000</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card">
+                        <img src="../../assets/img/menu6.jpg" class="card-img-top" alt="Product 5">
+                        <div class="card-body">
+                            <h5 class="card-title">KEKIAN AYAM UDANG</h5>
+                            <p class="card-text">
+                                Kekian ayam udang terbuat dari ayam, udang, telur, dan tepung terigu yang dihaluskan lalu dikukus.
+                            </p>
+                            <button class="btn">Rp. 20.000 - 35.000</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
+                    <div class="card">
+                        <img src="../../assets/img/siomay-ayam.jpg" class="card-img-top" alt="Product 6">
+                        <div class="card-body">
+                            <h5 class="card-title">SOMAY AYAM</h5>
+                            <p class="card-text">
+                                Olahan Ayam, udang, telur, tepung dan disajikan dengan di kukus dengan kulit siomay dan diberi wortel diatas nya
+                            </p>
+                            <button class="btn">Rp. 20.000 - 35.000</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+                        <div class="card">
+                            <img src="../../assets/img/wijen-ayamudang.jpe" class="card-img-top" alt="Wijen Ayamudang">
+                            <div class="card-body">
+                                <h5 class="card-title">WIJEN AYAM UDANG</h5>
+                                <p class="card-text">Olahan ayam dan udang dibalut wijen garing, menciptakan paduan cita rasa yang renyah dan menggugah selera.</p>
+                                <button class="btn">Rp. 20.000 - 35.000</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Product -->
+
+    <!-- Footer -->
+    <div class="container-fluid" id="footer">
+        <footer class="py-3">
+            <ul class="nav justify-content-center pb-2">
+                <li class="nav-item"><a href="https://www.instagram.com/nyah.siok/" target="_blank" class="fa fa-instagram"></a></li>
+                <li class="nav-item"><a href="https://api.whatsapp.com/send?phone=6285719679279" target="_blank" class="fa fa-whatsapp"></a></li>
+            </ul>
+            <p class="text-center border-bottom mt-0 pb-2">
+                Alamat<br>
+                Jln. Petelan selatan no. 739 Semarang
+            </p>
+            <p class="text-center mx-0 my-0">
+                Copyright © Kelompok 2, Frontend Gamelab Indonesia
+            </p>
+        </footer>
+    </div>
+
+    <!-- Script untuk library AOS -->
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

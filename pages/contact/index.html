@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Animation on Scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="../../assets/img/logo.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../assets/style.css">
+
+    <!-- Include SweetAlert CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.css">
+
+    <!-- Include SweetAlert JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+
+    <!-- Include SweetAlert CSS file -->
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
+
+    <!-- JS -->
+    <script src="../../assets/script.js"></script>
+    <title>Contact | Nyah Siok</title>
+</head>
+
+<body>
+
+
+
+    <div class="container-fluid" id="navbar">
+        <div class="container">
+            <header class="d-flex flex-wrap justify-content-between py-3">
+                <a href="/"
+                    class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                    <img src="../../assets/img/logo.png" alt="logo">
+                    <span class="fs-4">Nyah Siok</span>
+                </a>
+
+                <!-- Menu Navbar -->
+                <ul class="nav">
+                    <li class="nav-item"><a href="../../index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="../about/index.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="../product/index.html" class="nav-link">Product</a></li>
+                    <li class="nav-item"><a href="" class="nav-link active" aria-current="page">Contact</a></li>
+                    <li class="nav-item"><a href="../team/index.html" class="nav-link">Team</a></li>
+                </ul>
+
+                <div class="hamburger" onclick="openSidebar()">&#9776;</div>
+            </header>
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">&times;</a>
+        <div class="mt-4">
+            <a href="../../index.html" class="side-link">Home</a>
+            <a href="../about/index.html" class="side-link">About</a>
+            <a href="../product/index.html" class="side-link">Product</a>
+            <a href="" class="side-link active" aria-current="page">Contact</a>
+            <a href="../team/index.html" class="side-link">Team</a>
+        </div>
+    </div>
+
+    <!-- Konten -->
+    <!-- Contact -->
+    <section class="contact mb-5">
+        <div class="container">
+            <h1 class="text-center my-4" data-aos="fade-down" data-aos-delay="400"><b>Hubungi Kami</b></h1>
+            <hr class="garis">
+            <p class="text-center mb-2" data-aos="fade-down" data-aos-delay="450">"Punya pertanyaan atau ingin pesan
+                makanan? jangan ragu untuk menghubungi kami dengan mengisi formulir berikut!"</p>
+            <div class="row mt-4">
+                <div class="col-md-6 mb-4">
+                    <form class="needs-validation was-validated" id="pesanForm" onsubmit="sendMessage()">
+                        <div class="mb-3" data-aos="fade-down" data-aos-delay="500">
+                            <label for="name" class="form-label">Nama</label>
+                            <input type="text" class="form-control" id="name" placeholder="Masukkan Nama Anda" required>
+                            <div class="invalid-feedback">
+                                Silahkan isi nama lengkap
+                            </div>
+                        </div>
+
+                        <div class="mb-3" data-aos="fade-down" data-aos-delay="600">
+                            <label for="whatsapp" class="form-label">Nomor WhatsApp</label>
+                            <input type="text" class="form-control" id="whatsapp"
+                                placeholder="Masukkan Nomor WhatsApp Anda" required>
+                            <div class="invalid-feedback">
+                                Silahkan isi nomor WhatsApp
+                            </div>
+                        </div>
+
+                        <div class="mb-3" data-aos="fade-down" data-aos-delay="600">
+                            <label for="jenis" class="form-label">Jenis Pesan</label>
+                            <select class="form-select" id="jenis" required>
+                                <option selected disabled value="">Pilih jenis pesan...</option>
+                                <option>Makanan</option>
+                                <option>Pelayanan</option>
+                                <option>Pertanyaan Lain</option>
+                            </select>
+                            <div id="validationServer04Feedback" class="invalid-feedback">
+                                Silahkan pilih jenis pesan
+                            </div>
+                        </div>
+
+                        <div class="mb-3" data-aos="fade-down" data-aos-delay="800">
+                            <label for="message" class="form-label">Pesan</label>
+                            <textarea class="form-control" id="message" rows="3" placeholder="Tulis pesan Anda disini!"
+                                required=""></textarea>
+                            <div class="invalid-feedback">
+                                Silahkan isi pesan dengan lengkap
+                            </div>
+                        </div>
+                        <button type="submit" class="btn" id="KirimPesanan">Kirim Pesan</button>
+                    </form>
+
+                    <script>
+                        
+                            $('#KirimPesanan').click(function () {
+                                if ($('#name').val().trim() === '' || $('#message').val().trim() === '' || $('#whatsapp').val().trim() === '' || $('#jenis').val().trim() === '') {
+                                    swal('', 'Mohon lengkapi semua form', 'warning'); // Menampilkan peringatan menggunakan sweetalert
+                                     return false;
+                                }
+                            });
+                        
+                    </script>
+
+                </div>
+
+                <div class="col-md-6" data-aos="fade-down" data-aos-delay="400">
+                    <div id="map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.2486420756436!2d110.43062947475752!3d-6.979960393020839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708cac1d8dd5c9%3A0x8cc09d48f3e0f20!2sJl.%20Karang%20Kb.%20Sel.%20No.743%2C%20Sarirejo%2C%20Kec.%20Semarang%20Tim.%2C%20Kota%20Semarang%2C%20Jawa%20Tengah%2050124!5e0!3m2!1sid!2sid!4v1711511572684!5m2!1sid!2sid"
+                            width="100%" height="450" style="border:0; border-radius: 20px;" allowfullscreen=""
+                            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="kirimm" tabindex="-1" aria-labelledby="pesankirim" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="pesankirim">Konfirmasi</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Apakah anda yakin mengirim pesan?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                    <button type="button" class="btn" data-bs-dismiss="modal"
+                        style="background-color: var(--primary); color: white;">Iya</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="container-fluid" id="footer">
+        <footer class="py-3">
+            <ul class="nav justify-content-center pb-2">
+                <li class="nav-item"><a href="https://www.instagram.com/nyah.siok/" target="_blank"
+                        class="fa fa-instagram"></a></li>
+                <li class="nav-item"><a href="https://api.whatsapp.com/send?phone=6285719679279" target="_blank"
+                        class="fa fa-whatsapp"></a></li>
+            </ul>
+            <p class="text-center border-bottom mt-0 pb-2">
+                Alamat<br>
+                Jln. Petelan selatan no. 739 Semarang
+            </p>
+            <p class="text-center mx-0 my-0">
+                Copyright © Kelompok 2, Frontend Gamelab Indonesia
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        AOS.init();
+
+
+        function sendMessage() {
+            const name = document.getElementById("name").value;
+            const jenis = document.getElementById("jenis").value;
+            const message = document.getElementById("message").value;
+
+            const url = "https://api.whatsapp.com/send?phone=6281228900185&text=Assalamualaikum%0A%0ANama%20%3A%20" + name + "%0AJenis%20Pesanan%3A%20" + jenis + "%0A%0A" + message + ""
+            window.open(url, "_blank");
+        }
+
+
+
+        // document.querySelector('form').addEventListener('submit', function(event) {
+        //     event.preventDefault();
+
+        //     var inputs = this.querySelectorAll('input, textarea');
+        //     var allFilled = Array.from(inputs).every(input => input.value.trim() !== '');
+
+        //     if (allFilled) {
+        //         var modal = new bootstrap.Modal(document.getElementById('kirimm'));
+        //         modal.show();
+        //     }
+        // });
+    </script>
+</body>
+
+</html>
